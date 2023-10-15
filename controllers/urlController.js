@@ -78,7 +78,7 @@ exports.fetchUrlDetails = async (req, res) => {
         const urlDetails = await Url.findById(uniqueId);
 
         res.status(200).json({
-            _id:urlDetails._id,
+            urlUniqueId:urlDetails._id,
             originalUrl: urlDetails.originalUrl,
             shortenUrl: `${BASE_URL}/${urlDetails._id}`,
             linkRedirectionCount: urlDetails.linkRedirectionCount,
